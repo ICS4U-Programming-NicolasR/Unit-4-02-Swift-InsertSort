@@ -10,14 +10,14 @@
 import Foundation
 
 func insertSort(_ array: inout [Int]) {
-    for i in 1..<array.count {
+    for counter in 1..<array.count {
         let key = array[i]
-        var j = i - 1
-        while j >= 0 && array[j] > key {
-            array[j + 1] = array[j]
-            j -= 1
+        var counter2 = counter - 1
+        while counter2 >= 0 && array[counter2] > key {
+            array[counter2 + 1] = array[counter2]
+            counter2 -= 1
         }
-        array[j + 1] = key
+        array[counter2 + 1] = key
     }
 }
 
